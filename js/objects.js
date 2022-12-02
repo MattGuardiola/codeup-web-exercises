@@ -131,13 +131,6 @@
 
 
 
-
-
-
-
-
-
-
     /**
      * Bonus:
      * - Create a function named `createBook` that accepts a title and author
@@ -148,5 +141,22 @@
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
+    let library = []
+    let book = {}
+
+    function createBook() {
+        let addBook = confirm(`Would you like to add a book`)
+        if (addBook === true) {
+            book = {
+                bookTitle: prompt(`Please enter the title of your book`),
+                bookAuthor: prompt(`please enter the first and last name of the author`)
+            }
+            library.push(book)
+            console.log(library)
+
+        }
+    }
+
+    (createBook())
 
 })();
