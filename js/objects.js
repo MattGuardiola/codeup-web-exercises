@@ -125,7 +125,7 @@
     books.forEach((book) => {
         console.log(`book #${count}`)
         console.log(`title: ${book.title}`)
-        console.log(book.author)
+        console.log(`Author: ${book.author.firstName} ${book.author.lastName}`)
         count++;
     })
 
@@ -151,12 +151,14 @@
                 bookTitle: prompt(`Please enter the title of your book`),
                 bookAuthor: prompt(`please enter the first and last name of the author`)
             }
-            library.push(book)
-            console.log(library)
+            console.log(book);
+            console.log(library);
 
         }
     }
 
-    (createBook())
+    createBook();
 
 })();
+
+
