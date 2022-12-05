@@ -10,8 +10,8 @@ const deckOfCards = [...cards, ...cards, ...cards, ...cards];
 
 
 function getRandomCard() {
-    const randomCard = Math.floor(Math.random() * 52);
-    const pickedCard = deckOfCards.splice(randomCard, 1)[0];
+    const randomCard = Math.floor(Math.random() * 51);
+    pickedCard = deckOfCards.splice(randomCard, 1)[0];
     return pickedCard;
 }
 
@@ -40,10 +40,12 @@ startGame()
 
 
 function getHand() {
-    console.log(`here's your first hand`)
+    console.log(`here's your hand`)
     let card1 = getRandomCard()
     let card2 = getRandomCard()
     let card3 = getRandomCard()
+    let card4 = getRandomCard()
+    let card5 = getRandomCard()
     console.log(card1)
     console.log((card2))
     let hitMe = confirm(`your total is ` + (card1 + card2) + ` would you like another card?`)
@@ -52,16 +54,47 @@ function getHand() {
         let cardTotal = (card1 + card2 + card3)
         if(hitMe === true && cardTotal < 21) {
             console.log(card3)
-            confirm(`your total is ` + (card1 + card2 + card3) + ` would you like another card?`)
+            let hitMeAgain = confirm(`your total is ` + (card1 + card2 + card3) + ` would you like another card?`)
+                if(hitMeAgain === false){
+                    winOrLose2()
+                }
         }
         else if (hitMe === true && cardTotal > 21){
             console.log(card3)
-            console.log(`HA! incase you didnt know ${cardTotal} is greater than 21. You lose! better luck next time. `)
+            alert(`HA! incase you didnt know ${cardTotal} is greater than 21. You lose! better luck next time. `)
+            ++computerScore
+        }
+        else if (hitMe === false) {
+            alert (`your total was ` + (card1 + card2) + ` my total was ` + (card4 + card5))
+            winOrLose()
+        }
+        function winOrLose() {
+            if((card1 + card2) > (card4 + card5)){
+                alert(`UGH ${card1 + card2} is greater than ${card4 + card5}. You win!`)
+                ++playerScore
+            }
+            else {
+                alert(`BOOM! ${card4 + card5} is greater than ${card1 + card2}. You loose and I win!`)
+                ++computerScore
+            }
+        }
+        function winOrLose2(){
+            if((card1 + card2 + card3) > (card4 + card5)){
+                alert(`UGH ${card1 + card2 + card3} is greater than ${card4 + card5}. You win!`)
+                ++playerScore
+            }
+            else{
+                alert(`BOOM! ${card4 + card5} is greater than ${card1 + card2 + card3}. You loose and I win!`)
+                ++computerScore
+            }
         }
     }
 
 
 }
+
+
+
 playAgain()
 function playAgain(){
     let doAgain = confirm(`Feel like testing your luck again?`)
