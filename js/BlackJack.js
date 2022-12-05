@@ -11,7 +11,7 @@ const deckOfCards = [...cards, ...cards, ...cards, ...cards];
 
 function getRandomCard() {
     const randomCard = Math.floor(Math.random() * 51);
-    pickedCard = deckOfCards.splice(randomCard, 1)[0];
+    let pickedCard = deckOfCards.splice(randomCard, 1)[0];
     return pickedCard;
 }
 
@@ -73,15 +73,25 @@ function getHand() {
                 alert(`UGH ${card1 + card2} is greater than ${card4 + card5}. You win!`)
                 ++playerScore
             }
+            else if((card1 + card2) === (card4 + card5)){
+                alert(`hmm, we both got ${card4 + card5}. Lets call it a tie. I'll give us both a point`)
+                ++playerScore
+                ++computerScore
+            }
             else {
                 alert(`BOOM! ${card4 + card5} is greater than ${card1 + card2}. You loose and I win!`)
-                ++computerScore
+
             }
         }
         function winOrLose2(){
             if((card1 + card2 + card3) > (card4 + card5)){
                 alert(`UGH ${card1 + card2 + card3} is greater than ${card4 + card5}. You win!`)
                 ++playerScore
+            }
+            else if((card1 + card2 + card3) === (card4 + card5)){
+                alert(`hmm, we both got ${card4 + card5}. Lets call it a tie. I'll give us both a point`)
+                ++playerScore
+                ++computerScore
             }
             else{
                 alert(`BOOM! ${card4 + card5} is greater than ${card1 + card2 + card3}. You loose and I win!`)
@@ -108,4 +118,3 @@ function playAgain(){
     }
 
 }
-
