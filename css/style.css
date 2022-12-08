@@ -1,3 +1,50 @@
+body{
+    background-color: aliceblue;
+    background-image: url("../img/helloWorldPhotos/white-abstract-background-design_23-2148825582.webp") ;
+    font-family: Arial;
+}
+
+
+
+
+
 .fancy-header{
+    text-align: center;
     color: purple;
 }
+
+h2{
+    color: darkblue;
+    text-decoration: underline;
+}
+
+
+ul {
+    list-style-type: square;
+}
+
+td {
+    font-size: large;
+    padding: 20px;
+}
+
+tr{
+    font-size: larger;
+    padding: 10px;
+}
+
+.backToTop {
+    background-color: rgb(60, 160, 250);
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+    border-radius: 18px;
+    cursor: pointer;
+    transition: box-shadow .1.5s;
+}
+
+.backToTop:hover {
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+
