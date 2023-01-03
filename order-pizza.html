@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/order-pizza.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/66bf6e2046.js" crossorigin="anonymous"></script>
+        <title>Order Pizza</title>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Pizza World</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Order Online</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Menu</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Zip Code" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search stores near you!</button>
+                    </form>
+                    <p><i class="fa-solid fa-user"></i> sign up!</p>
+                </div>
+            </div>
+        </nav>
+        <div class="jumbotron d-none d-md-flex">
+<!--            <img class="pizzaPhoto" src="img/helloWorldPhotos/pizza.png">-->
+            <div id="pizzaBanner" class="p-3 mb-2 bg-light text-dark">Welcome to Pizza World!</div>
+<!--            <p class="pizzaWorldBanner">Welcome to Pizza World!</p>-->
+        </div>
+        <h2 class="buildPizza">Build your own pizza!</h2>
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true"><span class="badge bg-secondary">1</span> Size and Crust</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false"><span class="badge bg-secondary">2</span> Cheese and Sauce</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false"><span class="badge bg-secondary">3</span> Toppings</button>
+            </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                <div id= crustAlert class="alert alert-primary" role="alert">
+                    Choose Size and Crust
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card" style="width: auto;">
+                            <div class="card-header">
+                                Hand Tossed
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Garlic seasoned crust with a rich, buttery taste.</li>
+                                <li class="list-group-item">
+                                    <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                                    Small (10")
+                                </li>
+                                <li class="list-group-item">
+                                    <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                                    Medium (12")
+                                </li>
+                            </ul>
+                        </div>
+                        <br>
+                        <div class="card" style="width: auto;">
+                            <div class="card-header">
+                                Crispy Thin
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Thin enough for optimal crispy to crunchy ratio.</li>
+                                <li class="list-group-item">
+                                    <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                                    Medium (12")
+                                </li>
+                                <li class="list-group-item">
+                                    <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                                    Large (14")
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body bg-light">
+                    <button id="nestStep1" class="btn btn-primary float-sm-end" type="submit">Next Step ></button>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                <div id= toppingAlert class="alert alert-primary" role="alert">
+                    Choose Toppings
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card" style="width: auto;">
+                            <div class="card-header">
+                                Cheese
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">How Much?</li>
+                                <li class="list-group-item">
+                                    <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                                    Normal
+                                </li>
+                                <li class="list-group-item">
+                                    <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                                    More than normal
+                                </li>
+                            </ul>
+                        </div>
+                        <br>
+                        <div class="card" style="width: auto;">
+                            <div class="card-header">
+                                Crispy Thin
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Thin enough for optimal crispy to crunchy ratio.</li>
+                                <li class="list-group-item">
+                                    <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                                    Medium (12")
+                                </li>
+                                <li class="list-group-item">
+                                    <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                                    Large (14")
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body bg-light">
+                    <button id="nestStep2" class="btn btn-primary" type="submit">Next Step ></button>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,72 @@
+.btn-outline-success {
+    color: #0e8efd;
+    border-color: #0e8efd;
+    padding-top: 0;
+    padding-bottom: 0;
+    width: 340px;
+}
+
+.btn-outline-success:hover{
+    background-color: #0e8efd;
+}
+
+.d-flex{
+    position: absolute;
+    left: 300px;
+}
+
+.fa-solid{
+    padding-top: 1em;
+}
+
+.pizzaPhoto{
+    width: 100%;
+    background-image: url("../img/helloWorldPhotos/pizza.png");
+}
+
+
+
+.totalBanner{
+    text-align: center;
+}
+
+.buildPizza{
+    font-size: 32px;
+}
+
+.badge{
+    border-radius: 100px;
+}
+
+#toppingAlert{
+    color: white;
+    background-color: #106bf4;
+    margin-bottom: 0;
+}
+#crustAlert{
+    color: white;
+    background-color: #106bf4;
+    margin-bottom: 0;
+}
+
+.jumbotron{
+    display: flex;
+    justify-content: center;
+    background-image: url("../img/helloWorldPhotos/pizza.png");
+    height: 346px;
+    background-size: cover;
+}
+
+#pizzaBanner{
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    opacity: 75%;
+    width: 100%;
+    font-weight: bold;
+    font-size: larger;
+}
+
+#nestStep1{
+    margin-bottom: 15px;
+}
