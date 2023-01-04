@@ -67,6 +67,29 @@
     font-size: larger;
 }
 
-#nestStep1{
+#nextStep1{
     margin-bottom: 15px;
+    float: right;
+}
+
+#nextStep1\.5{
+    display: inline-block;
+    float: right;
+}
+
+#nextStep2{
+    float: right;
+    margin-left: 2em;
+}
+
+#cheeseAlert{
+    color: white;
+    background-color: #106bf4;
+    margin-bottom: 0;
+}
+
+
+#nextStep3{
+    padding-top: 0;
+    float: right;
 }

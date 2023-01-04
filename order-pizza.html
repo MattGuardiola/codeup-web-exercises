@@ -92,12 +92,12 @@
                     </div>
                 </div>
                 <div class="card-body bg-light">
-                    <button id="nestStep1" class="btn btn-primary float-sm-end" type="submit">Next Step ></button>
+                    <button id="nextStep1" class="btn btn-primary float-sm-end" type="submit">Next Step ></button>
                 </div>
             </div>
             <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                <div id= toppingAlert class="alert alert-primary" role="alert">
-                    Choose Toppings
+                <div id= cheeseAlert class="alert alert-primary" role="alert">
+                    Choose Sauce and Cheese
                 </div>
                 <div class="card">
                     <div class="card-body">
@@ -120,27 +120,88 @@
                         <br>
                         <div class="card" style="width: auto;">
                             <div class="card-header">
-                                Crispy Thin
+                                Sauce
                             </div>
                             <ul class="list-group list-group-flush">
-                                <li class="list-group-item">Thin enough for optimal crispy to crunchy ratio.</li>
+                                <li class="list-group-item">What Type?</li>
                                 <li class="list-group-item">
                                     <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-                                    Medium (12")
+                                    Tomato
                                 </li>
+                                <li class="list-group-item">How Much?</li>
                                 <li class="list-group-item">
                                     <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-                                    Large (14")
+                                    Normal
                                 </li>
                             </ul>
                         </div>
                     </div>
                 </div>
                 <div class="card-body bg-light">
-                    <button id="nestStep2" class="btn btn-primary" type="submit">Next Step ></button>
+                    <button id="nextStep2" class="btn btn-primary" type="submit"> Next Step ></button>
+                    <button id="nextStep1.5" class="btn btn-primary" type="submit">< Previous </button>
                 </div>
             </div>
-            <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
+            <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                <div id= toppingAlert class="alert alert-primary" role="alert">
+                    Choose Toppings
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card" style="width: auto;">
+                            <div class="card-header">
+                                Choose Meats
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                    <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                                    Beef
+                                </li>
+                                <li class="list-group-item">
+                                    <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                                    Ham
+                                </li>
+                                <li class="list-group-item">
+                                    <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                                    Philly Steak
+                                </li>
+                                <li class="list-group-item">
+                                    <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                                    Bacon
+                                </li>
+                            </ul>
+                        </div>
+                        <br>
+                        <div class="card" style="width: auto;">
+                            <div class="card-header">
+                                Choose Non-Meats
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                    <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                                    Green Peppers
+                                </li>
+                                <li class="list-group-item">
+                                    <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                                    mushrooms
+                                </li>
+                                <li class="list-group-item">
+                                    <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                                    Onions
+                                </li>
+                                <li class="list-group-item">
+                                    <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                                    Peppers
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body bg-light">
+                    <button id="nextStep3" class="btn btn-primary" type="submit"> checkout <i class="fa-solid fa-cart-shopping"></i> </button>
+                </div>
+            </div>
+            </div>
         </div>
     </body>
 </html>
