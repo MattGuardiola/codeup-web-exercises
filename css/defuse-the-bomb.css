@@ -1,0 +1,53 @@
+body{
+    background-image: url(../img/helloWorldPhotos/rust-background.jpeg);
+}
+
+#defuser{
+    align-self: center;
+    background-color: #9c292b;
+    color: white;
+    border: none;
+    padding: 5px;
+    font-size: 31px;
+    height: 180px;
+    width: 180px;
+    margin-top: 2em;
+    box-shadow: 0 4px 6px #0c0909;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border-radius: 90%;
+    animation: blinker 1s linear infinite;
+}
+
+#defuser:hover{
+    background-color: #d5494c;
+}
+
+
+#defuser:active {
+    background-color: #8d1c1d;
+    box-shadow: 0 0 2px darkslategray;
+    transform: translateY(2px);
+    animation: none;
+}
+
+#message{
+    font-size: xxx-large;
+    color: white;
+    font-family: 'Lacquer', cursive;
+}
+
+
+.the-bomb{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+@keyframes blinker {
+    from {background-color: #942328
+    }
+    to {background-color: #cd484c}
+}
