@@ -9,13 +9,41 @@
             crossorigin="anonymous"></script>
 </head>
 <body>
-<h1>Hello World!</h1>
+<h1 id="title">Hello World!</h1>
+<p id="first-sentence">Do you know the things that are in the sentence "Hello World!"?</p>
+<ul class="the-list">
+    <li class="codeup">Hello</li>
+    <li class="codeup">World</li>
+    <Li class="codeup">!</Li>
+</ul>
+
+<div class="other-sentence">
+    Yep, that's pretty much it...
+</div>
 
 
+<script
+        src="https://code.jquery.com/jquery-3.6.3.js"
+        integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+        crossorigin="anonymous">
+
+</script>
 <script>
+
+    const theTitle = $("#title").html();
+    const firstSentence = $("#first-sentence").html()
+
     $(document).ready(function () {
         alert('DOM loaded according to JQuery')
+        alert(theTitle + " is an h1 element")
+        alert(firstSentence + " is the first sentence of the page")
     });
+
+
+    $(".codeup").css("border" , "solid red")
+    $("li").css("font-size" , "20px")
+    $("h1 , p , li").css("background-color" , "yellow")
+
 </script>
 </body>
 </html>
