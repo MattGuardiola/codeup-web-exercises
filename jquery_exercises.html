@@ -28,21 +28,64 @@
         crossorigin="anonymous">
 
 </script>
+<!--<script>-->
+
+<!--    const theTitle = $("#title").html();-->
+<!--    const firstSentence = $("#first-sentence").html()-->
+
+<!--    $(document).ready(function () {-->
+<!--        alert('DOM loaded according to JQuery')-->
+<!--        alert(theTitle + " is an h1 element")-->
+<!--        alert(firstSentence + " is the first sentence of the page")-->
+<!--    });-->
+
+
+<!--    $(".codeup").css("border" , "solid red")-->
+<!--    $("li").css("font-size" , "20px")-->
+<!--    $("h1 , p , li").css("background-color" , "yellow")-->
+
+<!--</script>-->
 <script>
+    $("h1").click(function (){
+        $(this).css("background-color" , "cornflowerblue")
+    })
 
-    const theTitle = $("#title").html();
-    const firstSentence = $("#first-sentence").html()
+    $('p').dblclick(function (){
+        $(this).css("font-size" , "18px")
+    })
 
-    $(document).ready(function () {
-        alert('DOM loaded according to JQuery')
-        alert(theTitle + " is an h1 element")
-        alert(firstSentence + " is the first sentence of the page")
-    });
+    $('li').hover(hoverOn, hoverOff);
+
+    function hoverOn() {
+        $(this).css("color" , "red")
+    }
+
+    function hoverOff(){
+        $(this).css("color" , "black")
+    }
 
 
-    $(".codeup").css("border" , "solid red")
-    $("li").css("font-size" , "20px")
-    $("h1 , p , li").css("background-color" , "yellow")
+
+
+
+
+    $('div').dblclick(function (){
+        $(this).css("font-size" , "32px")
+    })
+
+    $('div').click(function (){
+        $(this).css("background-color" , "red")
+    })
+
+    $('div').hover(hoverOn2, hoverOff2);
+
+    function hoverOn2() {
+        $(this).css("color" , "brown")
+    }
+
+    function hoverOff2(){
+        $(this).css("color" , "black")
+    }
 
 </script>
 </body>
