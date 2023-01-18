@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Konami Code</title>
+  <link rel="stylesheet" href="css/konami.css">
+</head>
+<body>
+<h1>Konami Code</h1>
+<audio id="theme" preload="auto">
+  <source src="../audio/zelda-theme.mp3" type="audio/mpeg">
+</audio>
+<div id="container">
+  <img id="image" src="img/link/link-standing.png">
+</div>
+
+
+
+  <script
+        src="https://code.jquery.com/jquery-3.6.3.js"
+        integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+        crossorigin="anonymous">
+
+</script>
+
+
+
+
+
+
+<script>
+  "use strict";
+
+  $(document).keydown(function(event) {
+    let keycode = (event.keyCode ? event.keyCode : event.which);
+    if(keycode == '38'){
+      $("#image").attr("src" , "../img/link/link-up.png");
+    } else if(keycode == '40'){
+      $("#image").attr("src","../img/link/link-down.png");
+    } else if(keycode == '37') {
+      $("#image").attr("src", "../img/link/link-left.png");
+    } else if(keycode == '39') {
+      $("#image").attr("src", "../img/link/link-right.png");
+    } else {
+      $("#image").attr("src", "../img/link/link-standing.png");
+    }
+  });
+
+
+
+
+
+
+
+$(document).keydown(function (){
+  $('audio#theme')[0].play()
+})
+
+
+
+  $(document).keyup(function(event){
+    console.log(event.keyCode);
+  });
+
+
+  function konami(fn) {
+    let input = [];
+    let pattern = [38,38,40,40,37,39,37,39,66,65,13];
+    $(document).keyup(function(e) {
+      input.push(e.keyCode);
+      if (input.toString().indexOf(pattern) >= 0) {
+        fn();
+        input = "";
+      }
+    });
+  }
+
+
+  $(document).ready(function () {
+    konami(function () {
+      $("source").pause;
+      let beat = new Audio('../audio/Zelda-get-item.mp3');
+      beat.play();
+      $('audio#theme')[0].pause()
+      let timeoutId = setTimeout(function (){
+        alert("You have added 30 lives!");
+      }, 500)
+    });
+  });
+
+
+</script>
+</body>
+</html>
