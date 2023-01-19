@@ -26,11 +26,6 @@
             border-radius: 10px;
         }
 
-        .yellow-list{
-            background-color: yellow;
-            border-radius: 10px;
-        }
-
         .bold-list{
             font-weight: bold;
         }
@@ -77,13 +72,6 @@
             height: 215px;
             width: 215px;
         }
-
-
-
-
-
-
-
     </style>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -176,17 +164,6 @@
 </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
 <script
         src="https://code.jquery.com/jquery-3.6.3.js"
         integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
@@ -208,25 +185,6 @@
     });
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     $("#yellowstone-list").click(function(){
         $("#yellowstone-list").children().first().toggleClass("blue-words");
     });
@@ -239,40 +197,24 @@
 
 
     $('#yellow-button').click(function (){
-        $("#canyon-list").children().last().toggleClass('yellow-list');
-        $("#yosemite-list").children().last().toggleClass('yellow-list');
-        $("#yellowstone-list").children().last().toggleClass('yellow-list');
+        $('ul li:last-child').toggleClass('highlighted')
     })
 
 
-    $('#yellowstone-title').click(function (){
-        $(this).next().toggleClass('bold-list');
+
+    $('h3').click(function(){
+        $(this).next().children().toggleClass('bold-list');
     })
-
-    $('#yosemite-title').click(function (){
-        $(this).next().toggleClass('bold-list');
-    })
-
-    $('#canyon-title').click(function (){
-        $(this).next().toggleClass('bold-list');
-    })
-
-
 
 
     $("#answerButton").click(function (){
         $(".invisible").toggleClass("visible")
     })
 
-
-
     $('dt').click(function (){
         $(this).toggleClass('highlighted')
     })
 
 </script>
-
-
-
 </body>
 </html>
