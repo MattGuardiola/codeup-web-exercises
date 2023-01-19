@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        h3{
+            user-select: none;
+        }
+        dl{
+            font-size: 20px;
+            user-select: none;
+        }
+        .invisible{
+            visibility: hidden;
+        }
+
+        .visible{
+            visibility: visible;
+        }
+
+        .not-highlighted{
+            background-color: white;
+        }
+
+        .highlighted{
+            background-color: yellow;
+            border-radius: 10px;
+        }
+
+        .yellow-list{
+            background-color: yellow;
+            border-radius: 10px;
+        }
+
+        .bold-list{
+            font-weight: bold;
+        }
+
+        .blue-words{
+            color: cornflowerblue;
+        }
+
+        .pic-container{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .button-container{
+            display: flex;
+            justify-content: space-between;
+        }
+        .box-1{
+            border: 20px solid saddlebrown;
+            height: 255px;
+            width: 255px;
+        }
+
+        .box-2{
+            border: 20px solid saddlebrown;
+            height: 255px;
+            width: 255px;
+        }
+
+        .box-3{
+            border: 20px solid saddlebrown;
+            height: 255px;
+            width: 255px;
+        }
+        .button1{
+            margin-left: 105px;;
+        }
+        .button3{
+            margin-right: 105px;;
+        }
+
+        img{
+            margin: 20px;
+            height: 215px;
+            width: 215px;
+        }
+
+
+
+
+
+
+
+    </style>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button id="answerButton">show answers</button>
+<dl>
+    <dt id="q1" class="not-highlighted">what can I expect to see while I'm in a national park?</dt>
+    <dd class="invisible">trees probably.</dd>
+</dl>
+<br>
+<dl>
+    <dt id="q2" class="not-highlighted">Does my phone get reception in the middle of a national park?</dt>
+    <dd class="invisible">Bro you're in a national park. get off your phone.</dd>
+</dl>
+<br>
+<dl>
+    <dt id="q3" class="not-highlighted">are there any dangerous animals at the national park?</dt>
+    <dd class="invisible">Oh man so many, we'd do something about it but we're scared. if you see one, run.</dd>
+</dl>
+<br>
+<dl>
+    <dt id="q4" class="not-highlighted">What happens if I get lost?</dt>
+    <dd class="invisible">well hopefully you find your way back soon <3. What, you want us to come fine you? then we'd both be lost!</dd>
+</dl>
+<br>
+<dl>
+    <dt id="q5" class="not-highlighted">Are there any poisionius berries or plants I should be aware of?</dt>
+    <dd class="invisible">Why? you planning on making a salad? we dont come to your house and pick your plants.</dd>
+</dl>
+<br>
+<dl>
+    <dt id="q6" class="not-highlighted">Do the national parks get really busy?</dt>
+    <dd class="invisible">Only on really busy days.</dd>
+</dl>
+<br>
+<dl>
+    <dt id="q7" class="not-highlighted">how long can I stay in a national park?</dt>
+    <dd class="invisible">Depends on how good you are at hiding.</dd>
+</dl>
+
+<h3 id="yellowstone-title">Yellowstone National Park</h3>
+<ul id="yellowstone-list">
+    <li>Yellowstone is home to more than half the world’s geysers.</li>
+    <li>Yellowstone has the largest concentration of mammals in the lower 48 states</li>
+    <li>285 species of birds can be found in Yellowstone</li>
+    <li>There are more than 1,800 known archaeological sites within the park.</li>
+</ul>
+
+<h3 id="canyon-title">Grand Canyon National Park</h3>
+<ul id="canyon-list">
+    <li>the Grand Canyon has over 1000 Caves</li>
+    <li>The Havasupai Indians Live in the Grand Canyon </li>
+    <li>President Roosevelt First Visited the Canyon in 1903</li>
+    <li>5.9 Million People Visit the Grand Canyon Every Year</li>
+</ul>
+
+<h3 id="yosemite-title">Yosemite National Park</h3>
+<ul id="yosemite-list">
+    <li>Yosemite is home to one of the tallest waterfalls in the world.(2,425 feet)</li>
+    <li> Yosemite is the only national park to bid to host the winter Olympics.</li>
+    <li>Yosemite is one of the few places in the U.S. where you can see a rainbow at night.</li>
+    <li>The park's diverse landscape supports more than 400 species of animal.</li>
+</ul>
+<br>
+<button id="yellow-button">Yellow Background</button>
+<br>
+<br>
+<br>
+
+<div class="pic-container">
+    <div class="box-1">
+        <img id="img1" src="img/nature/snow-mountains.jpg" width="100" height="100">
+    </div>
+
+    <div class="box-2">
+        <img id="img2" src="img/nature/grand-canyon-square.jpg">
+    </div>
+
+    <div class="box-3">
+        <img class="pic3" src="img/nature/sunrise.jpg">
+    </div>
+
+</div>
+<br>
+<div class="button-container">
+    <button class="button1">Switch!</button>
+    <button class="button2">Switch!</button>
+    <button class="button3">Switch!</button>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script
+        src="https://code.jquery.com/jquery-3.6.3.js"
+        integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+        crossorigin="anonymous">
+
+</script>
+<script>
+    $(document).ready(function(){
+        $(".button1").click(function(){
+            let img1 = $("#img1");
+            let img2 = $("#img2");
+            let img1_clone = $("#img1")
+
+
+            img1.replaceWith(img2);
+            img1_clone.replaceWith(img2);
+            img2.replaceWith(img1_clone);
+        });
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    $("#yellowstone-list").click(function(){
+        $("#yellowstone-list").children().first().toggleClass("blue-words");
+    });
+    $("#yosemite-list").click(function(){
+        $("#yosemite-list").children().first().toggleClass("blue-words");
+    });
+    $("#canyon-list").click(function(){
+        $("#canyon-list").children().first().toggleClass("blue-words");
+    });
+
+
+    $('#yellow-button').click(function (){
+        $("#canyon-list").children().last().toggleClass('yellow-list');
+        $("#yosemite-list").children().last().toggleClass('yellow-list');
+        $("#yellowstone-list").children().last().toggleClass('yellow-list');
+    })
+
+
+    $('#yellowstone-title').click(function (){
+        $(this).next().toggleClass('bold-list');
+    })
+
+    $('#yosemite-title').click(function (){
+        $(this).next().toggleClass('bold-list');
+    })
+
+    $('#canyon-title').click(function (){
+        $(this).next().toggleClass('bold-list');
+    })
+
+
+
+
+    $("#answerButton").click(function (){
+        $(".invisible").toggleClass("visible")
+    })
+
+
+
+    $('dt').click(function (){
+        $(this).toggleClass('highlighted')
+    })
+
+</script>
+
+
+
+</body>
+</html>
