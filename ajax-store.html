@@ -55,7 +55,7 @@
                             <td>${equipment.title}</td>
                             <td>${equipment.quantity}</td>
                             <td>${equipment.price}</td>
-                            <td>${equipment.categories}</td>
+                            <td>${equipment.categories.join(" / ")}</td>
                         </tr>`
                  })
                  $('#insertProducts').html(html)
