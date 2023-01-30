@@ -15,17 +15,14 @@ async function getLastCommitDate(username) {
 }
 
 
+function wait(num) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+                resolve('You\'ll see this after 3 seconds');
+        }, num);
+    });
+}
 
 
-
-//
-//
-//
-//
-// async function getLastCommitDate(username) {
-//     const response = await fetch(`https://api.github.com/users/${username}/events`);
-//     const events = await response.json();
-//     const commits = events.filter(event => event.type === "PushEvent");
-//     const lastCommit = commits[0];
-//     return lastCommit;
-// }
+wait(1000).then(() => console.log('You\'ll see this after 1 second'));
+wait(3000).then(() => console.log('You\'ll see this after 3 seconds'));
