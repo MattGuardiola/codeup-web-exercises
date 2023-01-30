@@ -18,11 +18,11 @@ async function getLastCommitDate(username) {
 function wait(num) {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-                resolve('You\'ll see this after 3 seconds');
+                resolve(`youll see this after ${num} miliseconds`);
         }, num);
     });
 }
 
 
-wait(1000).then(() => console.log('You\'ll see this after 1 second'));
-wait(3000).then(() => console.log('You\'ll see this after 3 seconds'));
+wait(1000).then((msg) => console.log(msg));
+wait(3000).then((msg) => console.log(msg));
